@@ -15,13 +15,11 @@
     Queuey.prototype.run = function() {
       var _results;
 
-      if (this.running) {
-        _results = [];
-        while (this.stack.length > 0) {
-          _results.push(this.worker(this.stack.shift()));
-        }
-        return _results;
+      _results = [];
+      while (this.stack.length > 0 && this.running) {
+        _results.push(this.worker(this.stack.shift()));
       }
+      return _results;
     };
 
     Queuey.prototype.start = function() {
