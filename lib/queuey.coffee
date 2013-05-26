@@ -8,9 +8,7 @@ class Queuey
 
   run: ->
     if @running
-      for elt in @stack[..]
-        @worker(elt)
-        @stack.splice(@stack.indexOf(elt), 1)
+      @worker(@stack.shift()) while @stack.length > 0
 
   start: ->
     @running = true

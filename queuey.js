@@ -13,15 +13,12 @@
     };
 
     Queuey.prototype.run = function() {
-      var elt, _i, _len, _ref, _results;
+      var _results;
 
       if (this.running) {
-        _ref = this.stack.slice(0);
         _results = [];
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          elt = _ref[_i];
-          this.worker(elt);
-          _results.push(this.stack.splice(this.stack.indexOf(elt), 1));
+        while (this.stack.length > 0) {
+          _results.push(this.worker(this.stack.shift()));
         }
         return _results;
       }
