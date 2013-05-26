@@ -1,5 +1,5 @@
 ### Queuey.js
-*A simple queue implementation*
+*A simple worker queue implementation*
 
 ```
 queue = new Queuey
