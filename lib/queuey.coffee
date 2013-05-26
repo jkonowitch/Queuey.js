@@ -8,6 +8,7 @@ class Queuey
 
   run: ->
     @worker(@stack.shift()) while @stack.length > 0 and @running
+    return
 
   start: ->
     @running = true
