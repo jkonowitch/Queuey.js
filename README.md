@@ -2,7 +2,7 @@
 *A simple queue implementation*
 
 ```
-queue = new Queue
+queue = new Queuey
 queue.worker = function(data) {
   console.log(data);
 }

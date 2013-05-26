@@ -1,4 +1,4 @@
-class Queue
+class Queuey
   constructor: ->
     @stack = []
 

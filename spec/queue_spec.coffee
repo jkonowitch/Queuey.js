@@ -1,11 +1,11 @@
 queue = undefined
 
-describe "queue", ->
+describe "Queuey", ->
   element = { foo: "bar" }
   anotherElement = { herp: "derp" }
 
   beforeEach ->
-    queue = new Queue
+    queue = new Queuey
     queue.worker = jasmine.createSpy("worker")
 
   it "adds data to the stack", ->
